@@ -40,9 +40,9 @@ public class Chapter9 {
      * 
      * Ex.
      * 
-     * Car honda = new Car(); // the "new" helps allocates memory for the instance.
-     * Scanner kbd = new Scanner(System.in); // Notice how this follows the format.
-     * honda.accel(); // The . (member access operator) allows us to call methods
+     * Car honda = new Car(); // the "new" allocates memory for the instance.
+     * Scanner kbd = new Scanner(System.in); // This follows the format.
+     * honda.accel(); // The . (member access operator) allows to call methods
      * 
      * ---------------------------------
      * 
@@ -111,7 +111,140 @@ public class Chapter9 {
      * 
      * ---------------------------------
      * 
+     * Data fields can be of reference types. A good example
+     * is the String type.
      * 
+     * ex.
+     * public class Student{
+     * 
+     * String name; // Default value of null
+     * int age; // Default value of 0
+     * boolean isScienceMajor; // Default value of false.
+     * char grade; // Default value of '\u0000'
+     * 
+     * }
+     * 
+     * If we construct the class without changing the properties
+     * and call the name, we will get a NullPointerException.
+     * 
+     * ---------------------------------
+     * 
+     * Primitive data types do not need a reference pointer.
+     * 
+     * ex.
+     * int i = 1; // value of i == 1
+     * Circle c = new Circle(); // Points to the entore Circle class instance
+     * 
+     * If you try to make two objects equal to one another, you are
+     * moving references.
+     * 
+     * ex.
+     * Circle c1 = new Circle();
+     * Circle c2 = new Circle();
+     * c1 = c2 // c1 now points to c2, which points to an object instance
+     * 
+     * ---------------------------------
+     * 
+     * The Date() class
+     * 
+     * Date
+     * +Date()
+     * +Date(elapseTime: long)
+     * 
+     * 
+     * ---------------------------------
+     * The toString method is provided to almost every
+     * Java builtin class to provide a quick definition
+     * of the object it is called on.
+     * 
+     * We should also create a toString method to document
+     * our classes / objects.
+     * ---------------------------------
+     * 
+     * Objects cannot be compared in the same way as
+     * primitives, we need to use a custom method
+     * to compare two Objects.
+     * 
+     * Consider the String class.
+     * We will encounter
+     * 
+     * ---------------------------------
+     * 
+     * Static variables are shared by all instances of a class.
+     * 
+     * -> Static methods are not tied to a specific object,
+     * you can call the method without an instance of the class.
+     * -> Static constants are final variables shared by all
+     * instances of the class.
+     * 
+     * ---------------------------------
+     * 
+     * Public classes, data or methods are visible to any class in any
+     * package.
+     * 
+     * Private data and methods can only be accessed by the declaring class.
+     * -> Getters and setters are used to expose the private methods to
+     * read and modify private variables outside of the class.
+     * 
+     * Typically setter:
+     * public void setAge(int age){
+     * this.age = age // Left side refers to internal member
+     * // Right side referers to the passed age.
+     * }
+     * 
+     * Typically getter (almost always no parameters need to be passed):
+     * public int getAge(){
+     * return this.age;
+     * }
+     * 
+     * ---------------------------------
+     * 
+     * Data should be private to increase security
+     * and enable easy maintainence.
+     * 
+     * ---------------------------------
+     * 
+     * When we pass parameters we can also pass whole
+     * objects via methods.
+     * -> When we pass objects we pass the reference variable
+     * for the object.
+     * 
+     * ---------------------------------
+     * 
+     * When you create an arry of objects you are actually
+     * creating an array of reference variables.
+     * 
+     * Ex. Circle[] cArray = new Circle[10]
+     * If we invoke cArray[1].getArea() it involves two levels of
+     * referencing. cArray references the entire array,
+     * cArray[1] refers to the second value in the array which itself
+     * is a reference to a Circle() object.
+     * 
+     * ---------------------------------
+     * 
+     * Immutable objects and classes cannot be changed.
+     * 
+     * If the class is private it is immutable, you cannot create
+     * objects of the class. The private class must have only private
+     * variables and methods.
+     * 
+     * If an object is immutable we cannot index it or modify
+     * its contents with traditional methods.
+     * 
+     * ---------------------------------
+     * 
+     * Passing information between classes by making an object
+     * of a class a member of another class is a practice called composition.
+     * 
+     * 
+     * 
+     * ---------------------------------
+     * 
+     * The scope of instance and static variables is anywhere within
+     * the class.
+     * -> The scope of a local variable starts from its declaration and
+     * continues to the end of the block that contains the variable. A local
+     * variable must be initialized explicitly before being used.
      * 
      * ---------------------------------
      */
