@@ -33,5 +33,4 @@ public class Tesla extends Car {
         this.battery = 100;
     }
 
-    
 }
