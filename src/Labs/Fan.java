@@ -1,4 +1,4 @@
-package Labs;
+package labs;
 
 public class Fan {
     final int SLOW = 1;

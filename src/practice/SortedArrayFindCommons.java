@@ -89,5 +89,8 @@ public class SortedArrayFindCommons {
         double[] arr2 = { 17, 35, 39, 40, 55, 58, 60 };
 
         System.out.println("The number of duplicates is " + sortedSearchDuplicates(arr1, arr2));
+
+
+        
     }
 }
