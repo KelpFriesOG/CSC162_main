@@ -28,4 +28,10 @@ public class Tesla extends Car {
     public double getBettery() {
         return battery;
     }
+
+    public void chargeBattery() {
+        this.battery = 100;
+    }
+
+    
 }
