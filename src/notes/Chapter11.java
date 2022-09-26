@@ -590,7 +590,13 @@ public class Chapter11 {
      * and in subclasses in different packages.
      * Public class members can be accessed across all other packages.
      * 
+     * The final keyword in used on variables to prevent changing
+     * the value of the variables. Furthermore, it can be used in
+     * method headers to prevent method overriding from inheriting
+     * classes.
      * 
+     * A class can also be declared final to prevent the class
+     * from being extended.
      * 
      */
 
