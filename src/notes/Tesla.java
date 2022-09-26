@@ -12,7 +12,8 @@ public class Tesla extends Car {
     }
 
     public Tesla() {
-        super();
+        // super();
+        // The super constructor is called implicitly via the compiler.
     }
 
     public void accel() {
