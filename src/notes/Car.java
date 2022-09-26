@@ -16,6 +16,8 @@ public class Car {
 
     public Car() { // Default constructor
         this.name = "Undefined";
+        this.brand = "Undefined";
+        this.yearOfProd = 0000;
         instances++;
     }
 
@@ -76,10 +78,24 @@ public class Car {
         return isIdentical;
     }
 
-    public String nInstances() {
+    public static String nInstances() {
         return (instances + " cars have been created.");
     }
 
     // #endregion
 
+    public static void main(String[] args) {
+        Car hondaCar = new Car();
+        Car mercedesCar = new Car();
+
+        System.out.println("Are the two cars identical? : " + hondaCar.equals(mercedesCar));
+
+        hondaCar.setBrand("Honda");
+        mercedesCar.setBrand("Mercedes");
+
+        System.out.println("Are the two cars identical? : " + hondaCar.equals(mercedesCar));
+
+        System.out.println(Car.nInstances());
+
+    }
 }
