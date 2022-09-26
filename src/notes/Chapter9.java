@@ -247,6 +247,30 @@ public class Chapter9 {
      * variable must be initialized explicitly before being used.
      * 
      * ---------------------------------
+     * 
+     * Getters and setters refer to the attributes of the
+     * objects and not the class itself. When we instantiate an
+     * object it is a self-contained entity which uses the class
+     * as a template.
+     * 
+     * However, when we set one object equal to another
+     * object.
+     * 
+     * Ex. 
+     * Car honda = new Car();
+     * Car prius = honda;
+     * 
+     * The prius object is not a new object but rather a
+     * reference variable that points to the underlying object
+     * named honda. In other words, the left hand side acts
+     * as an alias for an object, and the new keyword indicates
+     * the actual creation of an object in memory. Assigning
+     * (where there is no "new" keyword) an object to another
+     * object just creates a reference variable that points to
+     * the same piece of data.
+     * 
+     * ---------------------------------
+     * 
      */
 
     public static void main(String[] args) {
