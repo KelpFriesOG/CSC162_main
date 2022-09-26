@@ -34,4 +34,13 @@ public class Tesla extends Car {
         this.battery = 100;
     }
 
+    /*
+     * Note how this toString method overrides the toString method
+     * in the Car class and makes use of the Car class's toString
+     * method (by using super constructor) and simply appends to it.
+     */
+    public String toString() {
+        return super.toString() + "\n This is also an electric car!";
+    }
+
 }

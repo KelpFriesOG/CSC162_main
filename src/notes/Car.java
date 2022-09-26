@@ -82,6 +82,13 @@ public class Car {
         return (instances + " cars have been created.");
     }
 
+    public String toString() {
+        String message = "Car specs: \nName: " + this.name +
+                "\nBrand: " + this.brand +
+                "\nYear: " + this.yearOfProd;
+        return message;
+    }
+
     // #endregion
 
     public static void main(String[] args) {
