@@ -2,7 +2,7 @@ package data_structures;
 
 public class LinkedList<E> {
     Node<E> head, tail;
-    int size = 1;
+    int size = 0;
 
     // #region Constructors
 
@@ -28,6 +28,16 @@ public class LinkedList<E> {
 
     public E getLast() {
         return this.tail.value;
+    }
+
+    public E get(int index) {
+        Node<E> currentNode = head;
+
+        for (int i = 0; i < index; i++) {
+            currentNode = currentNode.next;
+        }
+
+        return currentNode.value;
     }
 
     // #endregion
@@ -117,13 +127,37 @@ public class LinkedList<E> {
             size--;
             return currentNode.value;
         }
+
     }
 
     // #endregion
 
-    public static void main(String []args){
+    public static void main(String[] args) {
         LinkedList<String> users = new LinkedList<String>();
-        users.addFirst("Hello");
+        users.addFirst("hello");
+        users.addFirst("Kalpesh says");
+        users.addLast("and goodbye");
+
+        // users contains: "Kalpesh says" --> "hello" --> "and goodbye"
+
+        System.out.println("The last element in the list is: " +
+                users.getLast());
+        // Should print out "and goodbye"
+        System.out.println("The element at index 1 is: " +
+                users.get(1));
+        // Should print out "hello"
+        System.out.println("The size of the linked list is: " + users.size);
+        // Should print out 3
+
+        System.out.println("Removed element at index 1 which was: " +
+                users.remove(1));
+        System.out.println("Now the size of the list is: " + users.size);
+
+        System.out.println("The first element in the list is: " +
+                users.getFirst());
+        System.out.println("The last element in the list is: " +
+                users.getLast());
+
     }
 
 }

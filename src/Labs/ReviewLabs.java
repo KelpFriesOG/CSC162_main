@@ -2,10 +2,10 @@ package labs;
 
 import java.util.Scanner;
 
+@SuppressWarnings("resource")
 public class ReviewLabs {
 
     // #region Question 1 (Palindrome integer)
-
     static void Question1() {
 
         Scanner input = new Scanner(System.in);
