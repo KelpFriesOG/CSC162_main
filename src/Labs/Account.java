@@ -1,4 +1,4 @@
-package notes;
+package labs;
 
 import java.util.Date;
 

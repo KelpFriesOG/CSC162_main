@@ -1,9 +1,5 @@
 package labs;
 
-import notes.Account;
-import notes.CheckingAccount;
-import notes.SavingsAccount;
-
 public class AccountTesting {
 
     public static void main(String[] args) {
@@ -19,7 +15,6 @@ public class AccountTesting {
         account3.withdraw(10000);
 
         System.out.println(account3.getBalance());
-
 
     }
 

@@ -1,4 +1,4 @@
-package notes;
+package labs;
 
 public class CheckingAccount extends Account {
     private double limit = 400;

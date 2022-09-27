@@ -2,6 +2,8 @@ package notes;
 
 import java.util.Scanner;
 
+import labs.Triangle;
+
 public class Chapter11Testing {
         public static void main(String[] args) {
 

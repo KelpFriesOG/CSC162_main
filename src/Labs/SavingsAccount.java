@@ -1,4 +1,4 @@
-package notes;
+package labs;
 
 public class SavingsAccount extends Account {
 

@@ -1,4 +1,6 @@
-package notes;
+package labs;
+
+import notes.GeometricObject;
 
 public class Triangle extends GeometricObject {
     private double side1 = 1.0, side2 = 1.0, side3 = 1.0;
