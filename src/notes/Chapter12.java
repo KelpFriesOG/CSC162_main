@@ -413,7 +413,6 @@ public class Chapter12 {
             System.out.println(d); // NOT EXECUTED
             int e = a + c; // NOT EXECUTED
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println(e.getMessage()); // EXECUTED 3rd
         } finally {
             System.out.println("This line should always print!\n");

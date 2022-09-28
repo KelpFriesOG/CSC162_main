@@ -1,6 +1,7 @@
 package notes;
 
 public class Chapter12Testing {
+    @SuppressWarnings("all")
     public static void main(String[] args) {
 
         // #region Testing the CircleWithException class
