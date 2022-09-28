@@ -12,8 +12,11 @@ public class Chapter12Testing {
             // The line above will throw the exception (debug to check)
             CircleWithException c3 = new CircleWithException(0);
         } catch (IllegalArgumentException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
+            // Should print "Radius cannot be negative"
         }
+
+        System.out.println("Hello");
 
         // #endregion
 

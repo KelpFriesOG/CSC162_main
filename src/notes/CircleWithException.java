@@ -11,7 +11,7 @@ public class CircleWithException {
     }
 
     public CircleWithException(double radius) {
-
+        setRadius(radius);
     }
 
     // #endregion
@@ -46,8 +46,6 @@ public class CircleWithException {
     public double findArea() {
         return radius * radius * Math.PI;
     }
-
-    
 
     // #endregion
 }
