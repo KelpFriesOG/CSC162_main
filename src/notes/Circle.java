@@ -1,5 +1,6 @@
 package notes;
 
+/* This class is identical to the CircleWithExceptions class in the textbook */
 public class Circle {
     private double radius;
     private static int numberOfObjects = 0;
