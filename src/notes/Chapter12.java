@@ -257,6 +257,38 @@ public class Chapter12 {
      * Scanner input = new Scanner(url.openStream)
      * 
      * -------------------------------------------------------------------------
+     * A little bonus question:
+     * 
+     * Suppose that statement2 causes an exception in the following code.
+     * 
+     * try {
+     * statement1;
+     * statement2;
+     * statement3;
+     * }
+     * catch (Exception1 ex1) {
+     * }
+     * catch (Exception2 ex2) {
+     * throw ex2;
+     * }
+     * finally {
+     * statement4;
+     * }
+     * statement5;
+     * 
+     * If no exception occurs so will both statement4 and statement5 be executed.
+     * 
+     * If the exception is of type Exception1 so will both statement4 and statement5
+     * be executed.
+     * 
+     * If the exception is of type Exception2 so will statement4 be executed but
+     * statement5 will not be executed.
+     * 
+     * If the exception is not Exception1 nor Exception2, so will statement4 be
+     * executed but statement5 will not be executed.
+     * 
+     * -------------------------------------------------------------------------
+     * 
      * 
      */
 
