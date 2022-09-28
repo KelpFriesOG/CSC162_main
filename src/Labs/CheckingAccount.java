@@ -5,6 +5,7 @@ public class CheckingAccount extends Account {
 
     public CheckingAccount(int id, double balance, double limit) {
         super(id, balance);
+        // Account(id, balance)
         this.limit = limit;
     }
 
@@ -14,6 +15,12 @@ public class CheckingAccount extends Account {
         } else {
             // super.balance -= amount
             super.setBalance(super.getBalance() - amount);
+
         }
     }
+
+    public double getLimit() {
+        return this.limit;
+    }
+
 }
