@@ -15,7 +15,7 @@ public class CheckingAccount extends Account {
         } else {
             // super.balance -= amount
             super.setBalance(super.getBalance() - amount);
-
+            
         }
     }
 
