@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class TestInheritance {
     public static void main(String[] args) {
 
-        System.out.println("Enter 10 integers: ");
+        System.out.println("Enter 10 integers (hit enter after last value): ");
         Scanner input = new Scanner(System.in);
 
         String[] values = input.nextLine().split(" ");
@@ -17,9 +17,9 @@ public class TestInheritance {
             arr.add(Integer.parseInt(values[i]));
         }
 
-        System.out.println(arr);
+        Child child = new Child(arr);
 
-        Child.removeDuplicates(arr);
+        child.removeDuplicates();
 
         input.close();
 

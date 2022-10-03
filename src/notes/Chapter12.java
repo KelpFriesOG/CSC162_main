@@ -289,6 +289,71 @@ public class Chapter12 {
      * 
      * -------------------------------------------------------------------------
      * 
+     * In-Class Notes-----------------------------------------------------------
+     * 
+     * An exception is an error that happens in the code.
+     * Ex. If you have an array of size 5, but you try to access the 6th index,
+     * you will get an ArrayIndexOutOfBounds Exception.
+     * 
+     * Errors are fixable, but fixing the error with an if-else block
+     * is not the best way to handle an exception. The best way is try
+     * catch blocks
+     * 
+     * If the user does not enter the expected data type.
+     * If the user enters a string but the computer wants an int,
+     * an error called InputMismatchException is thrown.
+     * 
+     * If you put a try-catch block within a while loop,
+     * the computer will always try to understand the input
+     * (and throw the appropriate exception)
+     * until an iteration occurs when no error is thrown.
+     * 
+     * You use a try catch block to handle user input edge cases, in other words
+     * you assume the user is stupid and will try inputting anything!
+     * 
+     * Whenever you try to get data from a database you should expect to handle
+     * NullPointerExceptions if the data is missing.
+     * 
+     * Exception is a class from which all other type of Exceptions
+     * are extended.
+     * 
+     * The Throwable class has two child class, Exception and Error.
+     * Under each exists the plethora of types of Exceptions and errors.
+     * The RuntimeException class has subclasses that represent exceptions
+     * that occur during runtime (ex. IndexOutOfBounds, IllegelArgumentException).
+     * 
+     * Exceptions are caused by your program and external circumstances,
+     * but Errors occur due to Internal errors that you as a developer
+     * rarely have the tools to resolve (other than reinstalling or updating
+     * your compiler).
+     * 
+     * Runtime errors as known as unchecked exceptions,
+     * all other errors checked exceptions.
+     * 
+     * Whenever you make your own method, it can throw
+     * an exception if you declare the header appropriately.
+     * The exception can then be handled by the program which calls the
+     * method.
+     * 
+     * Exceptions cannot be returned, its more appropriate to throw them.
+     * 
+     * Often times the finally portion of the try-catch statement is
+     * excluded. The finally block is the last part of a try-catch statement
+     * that is always executed regardless of whether or not you run into an
+     * exception in the the try block.
+     * 
+     * This is usually used to close streams of data after reading up
+     * and processing the data in the try portion of the try-catch block.
+     * 
+     * You can replace simple exception handling with if-else statements,
+     * but try-catch blocks are better for complex cases in which we do not
+     * know what exception we will have to handle.
+     * 
+     * 
+     * 
+     * 
+     * -------------------------------------------------------------------------
+     * 
      * 
      */
 
@@ -320,7 +385,7 @@ public class Chapter12 {
         }
     }
 
-    public static void method3(int n) {
+    public static void method3(int n) throws IllegalArgumentException{
         throw new IllegalArgumentException("Exception from method 3");
     }
 
