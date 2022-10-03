@@ -1,7 +1,6 @@
 package assignments.assignment1;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Parent {
 
@@ -10,18 +9,25 @@ public class Parent {
     }
 
     public static void removeDuplicates(ArrayList<Integer> list) {
-        Collections.sort(list);
+        ArrayList<Integer> uniques = new ArrayList<Integer>();
 
-        for (int j = 0; j < list.size() - 1; j++) {
-            // size is updated automatically as elements are deleted!
-            int A = list.get(j);
-            int B = list.get(j + 1);
-
-            if (A == B) {
-                list.remove(B);
+        for (int j = 0; j < list.size(); j++) {
+            if (!uniques.contains(list.get(j))) {
+                uniques.add(list.get(j));
             }
-
         }
 
+        System.out.println("The distinct integers are: ");
+        try {
+            for (int i = 0; i < uniques.size(); i++) {
+                System.out.print(uniques.get(i) + " ");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static void main(String[] args){
+        System.out.println("Hello");
     }
 }

@@ -13,25 +13,13 @@ public class TestInheritance {
 
         ArrayList<Integer> arr = new ArrayList<Integer>();
 
-        try {
-            for (int i = 0; i < values.length; i++) {
-                arr.add(Integer.getInteger(values[i]));
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        for (int i = 0; i < values.length; i++) {
+            arr.add(Integer.parseInt(values[i]));
         }
+
+        System.out.println(arr);
 
         Child.removeDuplicates(arr);
-
-        System.out.println("The 10 distinct integers are: ");
-
-        try {
-            for (int i = 0; i < arr.size(); i++) {
-                System.out.println(arr.get(i) + " ");
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
 
         input.close();
 
