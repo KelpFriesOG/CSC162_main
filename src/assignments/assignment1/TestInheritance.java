@@ -9,7 +9,7 @@ public class TestInheritance {
         System.out.println("Enter 10 integers (hit enter after last value): ");
         Scanner input = new Scanner(System.in);
 
-        String[] values = input.nextLine().split(" ");
+        String[] values = input.nextLine().split("[;:-]");
 
         ArrayList<Integer> arr = new ArrayList<Integer>();
 
@@ -17,9 +17,9 @@ public class TestInheritance {
             arr.add(Integer.parseInt(values[i]));
         }
 
-        Child child = new Child(arr);
+        Child child = new Child(arr); // Make the child object
 
-        child.removeDuplicates();
+        child.removeDuplicates2();
 
         input.close();
 

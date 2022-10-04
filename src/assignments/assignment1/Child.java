@@ -9,6 +9,6 @@ public class Child extends Parent {
     }
 
     public Child(ArrayList<Integer> list) {
-        super(list);
+        super(list); // Parent(list)
     }
 }
