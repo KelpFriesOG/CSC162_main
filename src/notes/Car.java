@@ -1,5 +1,7 @@
 package notes;
 
+import java.io.Serializable;
+
 public class Car {
 
     // #region Class variables

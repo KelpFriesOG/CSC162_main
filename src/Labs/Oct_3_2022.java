@@ -23,11 +23,14 @@ public class Oct_3_2022 {
 
                 input.close();
 
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException error) {
+
                 System.out.println("Error found!");
+                error.printStackTrace();
                 errorFound = true;
             }
 
+        
         } while (errorFound);
 
     }

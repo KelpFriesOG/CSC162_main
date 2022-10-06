@@ -37,18 +37,4 @@ public class Parent {
         }
     }
 
-    public void removeDuplicates2(){
-        ArrayList<Integer> blacklist = new ArrayList<Integer>();
-
-        for(int i = 0; i < list.size(); i++){
-            if(blacklist.contains(list.get(i))){
-                list.remove(i);
-            }
-            else{
-                blacklist.add(list.get(i));
-            }
-
-            
-        }
-    }
 }
