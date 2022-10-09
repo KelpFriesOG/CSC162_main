@@ -96,6 +96,7 @@ public class Car {
     public static void main(String[] args) {
         Car hondaCar = new Car();
         Car mercedesCar = new Car();
+        // Tesla myTesla = new Tesla();
 
         System.out.println("Are the two cars identical? : " + hondaCar.equals(mercedesCar));
 
