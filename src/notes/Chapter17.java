@@ -6,8 +6,10 @@ import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.RandomAccessFile;
 
 public class Chapter17 {
     /*
@@ -306,10 +308,106 @@ public class Chapter17 {
      * 
      * |=======================================================================|
      * 
+     * -------------------------------------------------------------------------
+     * 
+     * Not every object can be written to an output stream, objects that can
+     * be written are known as SERIALIZABLE objects. A serializable object is
+     * an instance of java.io.Serializable interface, therefore it must
+     * implement the Serializable interface.
+     * 
+     * The Serializable interface is a marker interface and does not have any
+     * requirements for the implementer to fulfill. The interface
+     * automatically allows Java's serialization mechanism to take over
+     * and automate the process of storing objects and arrays.
+     * 
+     * Object serialization: automating the proccess of writing objects to files
+     * Object deserialization: automating the process of reading objects from files.
+     * 
+     * All the wrapper classes for primitive-type values: java.math.BigInteger,
+     * java.math.BigDecimal, java.lang.String, java.lang.StringBuilder,
+     * java.lang.StringBuffer, java.util.Date, and java.util.ArrayList implement
+     * java.io.Serializable.
+     * 
+     * Attempting to store an object that does not support the Serializable
+     * interface would cause a NotSerializableException.
+     * 
+     * When an serializable object is stored, the class of the object is encoded,
+     * this includes the name and signature of the class, the values of the
+     * object's instance variables, and the closure of any other objects
+     * referenced by the object. The object's STATIC and TRANSIENT VARIABLES ARE
+     * NOT STORED.
+     * 
+     * Remember that ARRAYS ARE SERIALIZABLE but casting is required to
+     * pickup the arrays as their appropriate types.
+     * 
+     * -------------------------------------------------------------------------
+     * 
+     * |====================== java.io.RandomAccessFile =======================|
+     * implements both the Java.io.DataInput and java.io.DataOutput interfaces.
+     * 
+     * +RandomAccessFile(file: File, mode: String)
+     * Creates a RandomAccessFile stream with the specified File object and
+     * mode.
+     * 
+     * +RandomAccessFile(name: String, mode: String)
+     * Creates a RandomAccessFile stream with the specified file name
+     * string and mode.
+     * 
+     * close(): void
+     * Closes the stream and releases the resources associated with it.
+     * 
+     * getFilePointer(): long
+     * Returns the offset, in bytes, from the beginning of the file to where
+     * the next read or write occurs. (our location in the file)
+     * 
+     * length(): long
+     * Returns the length of the file
+     * 
+     * read(): int
+     * Reads a byte of data from this file and
+     * returns -1 at the end of the stream.
+     * 
+     * read(b: byte[]): int
+     * Reads up to b.length bytes of data from this
+     * file into an array of bytes. (Moves the read data into the byte
+     * array to fill it up as much as possible).
+     * 
+     * read(b: byte[], offset: int, len: int): int
+     * Reads upto len bytes of data from this file beginning at the offset
+     * into the array of bytes.
+     * 
+     * seek(pos: long): void
+     * Sets the offset (in bytes specified by pos) from the beginning of the
+     * stream to where the next read or write will occur.
+     * 
+     * setLength(newLength: long): void
+     * Sets a new length for the file
+     * 
+     * skipBytes(int n): int
+     * Skips over n bytes.
+     * 
+     * write(b: byte[]): void
+     * Writes b.length bytes from the specified byte array into this file
+     * starting at the current location of the file pointer.
+     * 
+     * write(b: byte[], offset: int, len: int): void
+     * Writes len bytes from the byte array (starting at the offset)
+     * to this file.
+     * 
+     * |=======================================================================|
+     * 
+     * A random-access file consists of a sequence of bytes. A special marker
+     * called a file pointer is positioned at one of these bytes. A read or
+     * write operation takes place at the location of the file pointer.
+     * When a file is opened, the file pointer is set at the beginning of
+     * the file. When you read from or write data to the file, the file pointer
+     * moves forward to the next data item.
      * 
      * -------------------------------------------------------------------------
      * 
      */
+
+    // #region Textbook Examples
 
     static void testFileStream() {
         // Creating an output stream to the file (makes the file if not present.)
@@ -383,9 +481,11 @@ public class Chapter17 {
 
     static void testObjectOutputStream() {
         try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("object.dat"))) {
-
+            output.writeUTF("John");
+            output.writeDouble(89);
+            output.writeObject(new java.util.Date());
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e.getStackTrace());
         }
     }
 
@@ -396,12 +496,97 @@ public class Chapter17 {
             java.util.Date date = (java.util.Date) (input.readObject());
             System.out.println(name + " " + score + " " + date);
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e.getStackTrace());
         }
     }
 
+    static void testObjectStreamForArray() {
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        String[] names = { "John", "Kelp", "Kimmie" };
+
+        try (ObjectOutputStream output = new ObjectOutputStream(
+                new FileOutputStream("array.dat", true))) {
+
+            output.writeObject(numbers);
+            output.writeObject(names);
+
+        } catch (IOException e) {
+            System.out.println(e.getStackTrace());
+        }
+
+        try (ObjectInputStream input = new ObjectInputStream(
+                new FileInputStream("array.dat"))) {
+
+            int[] newNumbers = (int[]) (input.readObject());
+            String[] newStrings = (String[]) (input.readObject());
+
+            // Displaying the arrays
+            for (int i = 0; i < newNumbers.length; i++) {
+                System.out.println(newNumbers[i] + " ");
+            }
+            System.out.println();
+            for (int i = 0; i < newStrings.length; i++) {
+                System.out.println(newStrings[i] + ", ");
+            }
+
+        } catch (IOException e) {
+            System.out.println(e.getStackTrace());
+        } catch (ClassNotFoundException e) {
+            System.out.println(e.getStackTrace());
+        }
+
+    }
+
+    static void testRandomAccessFile() {
+        try (RandomAccessFile inout = new RandomAccessFile("inout.dat", "rw")) {
+
+            inout.setLength(0);
+            // resets the contents
+            for (int i = 0; i < 200; i++) {
+                inout.writeInt(i);
+            }
+            // Fills the file with numbers from 0 to 200
+            // This will move the file pointer along with it, so we
+            // need to account for that later.
+
+            System.out.println("The current file length is " + inout.length());
+
+            inout.seek(0); // Resets position of file pointer
+            System.out.println("The first number is " + inout.readInt());
+
+            inout.seek(1 * 4);
+            System.out.println("The second number is " + inout.readInt());
+
+            System.out.println("The third number is " + inout.readInt());
+            // The inout's file pointer automatically increments the 4 bytes needed
+
+            inout.writeInt(777);
+            // The fourth number is modified to 777
+
+            inout.seek(inout.length()); // Moves the file pointer to the end
+            inout.writeInt(999); // Appends this new number to the file
+
+            System.out.println("The new file length is " + inout.length());
+            // Should be 4 more bytes to accomodate for the new int
+
+            inout.seek(4 * 3);
+            System.out.println("The 4th number is " + inout.readInt());
+
+        } catch (IOException e) {
+            System.out.println(e.getStackTrace());
+        }
+    }
+
+    // #endregion
+
     public static void main(String[] args) {
         // testFileStream();
-        testDataStream();
+        // testDataStream();
+        // detectEndOfFile();
+        // testObjectOutputStream();
+        // testObjectInputStream();
+        // testObjectStreamForArray();
+        // testRandomAccessFile();
+
     }
 }
