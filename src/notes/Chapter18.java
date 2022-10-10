@@ -416,8 +416,157 @@ public class Chapter18 {
      * ascending order ( we could use the selectionSort algo to do this if we
      * wanted to! ).
      * 
+     * If we are given a sorted list, how would we approach finding an
+     * element in the list? Instead of checking each element one by one
+     * we could search a fraction of the array by comparing the key to
+     * the midpoint or median of the array!
      * 
+     * Ex. Suppose array [1, 2, 7, 10, 12, 15, 22, 63, 82, 93, 97, 101]
+     * The user wants to know if the value 97 is in the array!
      * 
+     * binarySearch is called with four parameters: the list, the lowIndex,
+     * the highIndex, and the key. We calculate the midpoint based on the two
+     * indexes. Regardless of the list, the first call will always have
+     * lowIndex = 0 and highIndex = list.length-1. The key is what element
+     * we are looking for.
+     * 
+     * Lets Start:
+     * ^ represents the lowIndex position
+     * + represents the highIndex position
+     * 
+     * 1st Call: binarySearch(list, 0, 11, 97) // List has a length of 12
+     * [ 1, 2, 7, 10, 12, 15, 22, 63, 82, 93, 97, 101]
+     * - ^ --------------------------------------- +
+     * The midpoint index = (lowIndex + highIndex) / 2
+     * (0 + 11) / 2 = 5.5 which gets truncated to 5.
+     * The midpoint index has a value of 15, is 97 greater
+     * than, less than or equal to 15?
+     * 
+     * 97 is greater than 15 so we search the right half of
+     * the array. This means in our next call, we make
+     * binarySearch search in range [mid+1, highIndex].
+     * 
+     * 2nd Call: binarySearch(list, 6, 11, 97)
+     * [ 1, 2, 7, 10, 12, 15, 22, 63, 82, 93, 97, 101]
+     * ---------------------- ^ ------------------ +
+     * The midpoint index = (lowIndex + highIndex) / 2
+     * (6 + 11) / 2 = 8.5 which get truncated to 8.
+     * The midpoint index has a value 82, is 97 greater
+     * than, less than or equal to 82?
+     * 
+     * 97 is greater than 82 so we search the right half
+     * of the chunk of the array we are working on!
+     * This means in our next call, we make
+     * binarySearch search in range [mid+1, highIndex].
+     * 
+     * 3rd Call: binarySearch(list, 9, 11, 97)
+     * [ 1, 2, 7, 10, 12, 15, 22, 63, 82, 93, 97, 101]
+     * ---------------------------------- ^ ------ +
+     * The midpoint index = (lowIndex + highIndex) / 2
+     * (9 + 11) / 2 = 10
+     * The midpoint index has a value of 97, is 97
+     * greater than, less than, or equal to 97?
+     * Well they are the same number so you found a
+     * match at index 10. We can return 10 to
+     * the user to indicate that the value was
+     * found as the 10th value in the list!
+     * 
+     * Notice how unlike the fibonacci algorithm, this binarySearch
+     * algorithm halfs the problem size at each step rather than
+     * chunking on it iteratively. This means that the binarySearch
+     * algorithm is generally effective even for large lists!
+     * 
+     * Also if the key was not found in the list, our last step
+     * would show that the mid index would collide with our highIndex,
+     * in other words, in the binarySearch call
+     * we would see something like
+     * binarySearch(list, 11, 11, 97), at this point the midpoint
+     * would not equal our value, and our next call would be
+     * binarySearch(list, 12, 11, 97).
+     * 
+     * We we notice that our low index is somehow greater than our high index
+     * we stop the search because it indicates that the key value was not found!
+     * 
+     * Tower of Hanoi ----------------------------------------------------------
+     * 
+     * Expect this to be an assignment question because holy sh_t :)
+     * The textbook does a meh job at explaining the problem so look it up
+     * online for a better explanation.
+     * 
+     * Recursion vs Iteration --------------------------------------------------
+     * 
+     * When we use loops, we control the flow based on evaluating the condition
+     * in the header. When we use recursion, we used conditions within the
+     * method itself to determine if we want to make more recursive calls.
+     * 
+     * Recursion requires us to allocate the stack, which is to say
+     * that it requires a lot of "overhead" or memory, whereas iteration
+     * does not need to keep track of what the result of the previous
+     * loop iteration was.
+     * 
+     * So recursion costs extra memory, and handling that memory internally
+     * costs extra time. Furthermore any problem that can be done with recursion,
+     * is able to be done with iteration, so why should we use recursion?
+     * 
+     * Well the best benefit of recursion is that it allows us to find a simple,
+     * clear, and often mathematically more intutive solution than
+     * the iterative approach to solving a problem. Examples such
+     * as the Fractal problem
+     * (which we did not do, but search up Sierpinski triangles java if you are
+     * interested), the Tower of Hanoi problem, and the File Directory problem
+     * are good examples of how recursion simplifies our understanding.
+     * 
+     * In other words:
+     * --> ANY recursive method can be converted into a non-recursive equivalent.
+     * --> Recursive methods take more time and memory to execute than their
+     * non-recursive counterparts
+     * --> Recursive methods are NOT ALWAYS BUT SOMETIMES MORE simple than their
+     * non-recursive counterparts.
+     * --> There is always a selection statement in a recursive method to
+     * check if a base case has been reached.
+     * 
+     * Tail Recursion ----------------------------------------------------------
+     * 
+     * A method is tail-recursive if there is nothing left for the JVM to do
+     * after the return from a recursive call.
+     * 
+     * isPalindrome is tail-recursive (optimized palindrome checker) because
+     * after calling each case, and getting the returned value, there is
+     * nothing left to do other than pop the stack, (there are no calculations)
+     * just simply getting an eventual true/false from the bottom of the stack.
+     * 
+     * The computeFactorial method is not tail-recursive because after getting
+     * each call we have to perform multiplication of n * factorial(n-1), this
+     * means after the returns from each recursive call all returned values
+     * have to sequentially multiplied.
+     * 
+     * With all this in mind, tail recursion is preferable because what matters
+     * is the bottom of the stack or the final call, the intermeadiate calls
+     * are irrelevant to the final returns value because the execution stops
+     * when a desired base case is found and that base case is directly pushed
+     * to the top.
+     * 
+     * Compilers know that intermeadiate calls are irrelevant for tail recursion
+     * and can make optimizations to reduce stack size.
+     * 
+     * A nontail-recursive method can often be converted to a tail-recursive method
+     * by using auxiliary parameters. These parameters are used to contain the
+     * result. The idea is to incorporate the pending operations into the
+     * auxiliary parameters in such a way that the recursive call no longer
+     * has a pending operation.
+     * 
+     * Basically instead of popping from the top of the stack to build up the
+     * result, we can keep track of the result all the way down the recursion
+     * chain and simply return the final result once
+     * from the top of the stack.
+     * 
+     * For computeFactorial we could change the header to include an
+     * int result! The multiplication of n * factorial(n-1) would be placed
+     * into the result parameter, and as the stack would grow, the top of the
+     * stack would always contain the appropriate result.
+     * 
+     * When the stack is done iterating, our result would just be the latest
+     * result from the last call of computeFactorial.
      * 
      * -------------------------------------------------------------------------
      * 
@@ -584,8 +733,27 @@ public class Chapter18 {
 
     // #endregion
 
+    // #region Tail Recursive Factorial method
+
+    public static long tailFactorial(int n) {
+        return tailFactorial(n, 1); // Call auxiliary method
+    }
+
+    private static long tailFactorial(int n, int result) {
+        if (n == 0) {
+            return result;
+        } else {
+            return tailFactorial(n - 1, n * result); // recursive call
+            // Notice how keep track of the result with every call
+            // So there is no need to build up a result from intermeadiate
+            // calls we just return the result from the base case!
+        }
+    }
+
+    // #endregion
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        // Scanner input = new Scanner(System.in);
 
     }
 }
