@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Account {
     private int id = 0;
-    private double balance = 0;
+    protected double balance = 0;
     private double annualInterestRate = 0;
     private Date dateCreated = new Date();
 
@@ -50,9 +50,10 @@ public class Account {
     }
 
     public double getMonthlyInterest() {
-        return getMonthlyInterest() * balance;
+        return getMonthlyInterestRate() * balance;
     }
 
+    // Overriden
     public void withdraw(double amount) {
         balance -= amount;
     }

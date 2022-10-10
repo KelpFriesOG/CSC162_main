@@ -9,6 +9,7 @@ public class CheckingAccount extends Account {
         this.limit = limit;
     }
 
+    // Overriding the method from Account.java
     public void withdraw(double amount) {
         if (super.getBalance() - amount < 0 - limit) {
             System.out.println("You cannot withdraw!");
