@@ -1,6 +1,6 @@
 package notes;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 
 public class Car {
 

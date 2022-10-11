@@ -1,7 +1,5 @@
 package data_structures.binarytree;
 
-import javax.lang.model.util.ElementScanner14;
-
 public class BinaryTree {
     Node root;
 
@@ -18,7 +16,7 @@ public class BinaryTree {
     }
 
     // Iterative implementation of insertion
-    private Node insert(Node current, double value) {
+    public Node insert(Node current, double value) {
         if (current == null) {
             // If the node we are on is null, we create a new node
             // at the location of the current pointer.

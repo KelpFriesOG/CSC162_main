@@ -91,7 +91,8 @@ public class Loan {
         return loanDate;
     }
 
-    public static void main(String[] args){
+    @SuppressWarnings("all")
+    public static void main(String[] args) {
         try {
             Loan loan = new Loan(0.05, -5, 10000);
         } catch (IllegalArgumentException e) {
