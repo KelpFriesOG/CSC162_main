@@ -401,6 +401,8 @@ public class Chapter13 {
      * direct data access by clients (we use accessors and mutators to
      * selectively choose if and when data can be modified).
      * 
+     * public static is an access modifier as a whole.
+     * 
      * Clarity:
      * Make sure to design your class intuitively and test it as a user.
      * A class can have multiple contracts, and thus we should try not
