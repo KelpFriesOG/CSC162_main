@@ -181,6 +181,7 @@ public class Lab4 {
     public static void main(String[] args) {
 
         // int size = 4;
+        
         Scanner input = new Scanner(System.in);
         // Initializing the scanner object
 
