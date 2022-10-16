@@ -15,13 +15,12 @@ import java.util.Scanner;
 public class Question2 {
     public static void main(String[] args) {
         String target = args[0]; // Used "Star"
-        String replacement = args[1]; // Used "car"
-        String filename = args[2]; // Used starwars (.txt is appended for you)
+        String filename = args[1]; // Used starwars (.txt is appended for you)
 
         File file = new File("src/assignments/assignment2/" + filename + ".txt");
         // Replace the first half the filename with your appropriate directory!
 
-        replaceWords(file, target, replacement);
+        replaceWords(file, target, "");
 
     }
 
