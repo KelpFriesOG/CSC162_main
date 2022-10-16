@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+/* Author: Kalpesh Chavan
+ * Date: Oct 15 2022
+ */
+
 public class Question2 {
     public static void main(String[] args) {
         String target = args[0]; // Used "Star"

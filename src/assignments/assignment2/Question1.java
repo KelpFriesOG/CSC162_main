@@ -4,6 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
+/* Author: Kalpesh Chavan
+ * Date: Oct 15 2022
+ */
+
 public class Question1 {
     public static void main(String[] args) {
 
