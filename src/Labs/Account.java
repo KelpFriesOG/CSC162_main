@@ -3,6 +3,7 @@ package labs;
 import java.util.Date;
 
 public class Account {
+    
     private int id = 0;
     protected double balance = 0;
     private double annualInterestRate = 0;
