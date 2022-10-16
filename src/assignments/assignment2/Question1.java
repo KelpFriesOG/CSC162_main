@@ -32,9 +32,9 @@ public class Question1 {
             System.out.println("The value at index " + index + " is " + values[index]);
             // Could throw ArrayIndexOutOfBoundsException
 
-        } catch (ArrayIndexOutOfBoundsException e) { // May be invoked from line 26
-            System.out.println("Your index was out of range!");
-        } catch (InputMismatchException e) { // May be invoked from line 28
+        } catch (ArrayIndexOutOfBoundsException e) { // May be invoked from line 32
+            System.out.println("Index out of bounds!");
+        } catch (InputMismatchException e) { // May be invoked from line 30
             System.out.println("Your index was not an integer!");
         }
 
