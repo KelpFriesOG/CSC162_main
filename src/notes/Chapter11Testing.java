@@ -29,18 +29,22 @@ public class Chapter11Testing {
                                 : filled == "n" ? false
                                                 : true;
 
-                Triangle triangle = new Triangle(side1, side2, side3, color, isFilled);
-                System.out.println(triangle.toString());
-                System.out.println("The triangle's color is : "
-                                + triangle.getColor());
-                System.out.println("Is the triangle filled? "
-                                + triangle.isFilled());
+                try {
+                        Triangle triangle = new Triangle(side1, side2, side3, color, isFilled);
+                        System.out.println(triangle.toString());
+                        System.out.println("The triangle's color is : "
+                                        + triangle.getColor());
+                        System.out.println("Is the triangle filled? "
+                                        + triangle.isFilled());
 
-                System.out.println("The triangle's perimeter is "
-                                + triangle.getPerimeter());
+                        System.out.println("The triangle's perimeter is "
+                                        + triangle.getPerimeter());
 
-                System.out.println("The triangle's area is "
-                                + triangle.getArea());
+                        System.out.println("The triangle's area is "
+                                        + triangle.getArea());
+                } catch (Exception e) {
+                        e.printStackTrace();
+                }
 
                 // #endregion
 

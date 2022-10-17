@@ -1,5 +1,7 @@
 package labs;
 
+import java.util.ArrayList;
+
 public class AccountTesting {
 
     public static void main(String[] args) {
@@ -9,6 +11,14 @@ public class AccountTesting {
         System.out.println(account1.getBalance());
 
         CheckingAccount account2 = new CheckingAccount(1, 1500, 100);
+
+        ArrayList<Account> accounts = new ArrayList<>();
+        // Account is a parent of two types of accounts so...
+        for (int i = 0; i < 10; i++) {
+            Account acc = new CheckingAccount(i, 1000, 500);
+            accounts.add(acc);
+        }
+
         account2.withdraw(10000);
 
         System.out.println(account2.getBalance());

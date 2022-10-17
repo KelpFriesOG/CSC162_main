@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TriangleTesting",
+            "request": "launch",
+            "mainClass": "labs.TriangleTesting",
+            "projectName": "CSC162_b5dd2043"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

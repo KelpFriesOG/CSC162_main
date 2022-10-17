@@ -34,6 +34,7 @@ public class TestInheritance {
         }
 
         Child child = new Child(arr); // Make the child object
+        // Parent par = new Child(arr);
 
         // The printing to console and formatting happens in the method.
         child.removeDuplicates();

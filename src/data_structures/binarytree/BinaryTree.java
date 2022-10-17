@@ -91,24 +91,80 @@ public class BinaryTree {
 
     public void delete(double value) {
 
+        Node parent = null;
         Node target = root;
 
-        while (target.value != value && target != null) {
-            if (value > root.value) {
+        while (target != null && target.value != value) {
+            parent = target;
+            if (value > target.value)
                 target = target.right;
-            } else if (value < root.value) {
+            else
                 target = target.left;
-            }
         }
 
-        if (target == null) {
-            System.out.println("Element could not be found");
+        if (target == null)
+            return;
+
+        // Case 1: Target node has no children
+        if (target.left == null && target.right == null) {
+            if (target == root) {
+                root = null;
+            } else {
+                if (parent.left == target) {
+                    parent.left = null;
+                } else {
+                    parent.right = null;
+                }
+            }
             return;
         }
 
-        if (target.left == null || target.right == null) {
-            target = null;
+        // Case 2: Target node has one child
+        else if (target.left == null || target.right == null) {
+            Node child = (target.left == null) ? target.right : target.left;
+
+            if (target == root) {
+                root = child;
+            } else {
+                if (parent.left == target) {
+                    parent.left = child;
+                } else {
+                    parent.right = child;
+                }
+            }
+            return;
+        }
+
+        // Case 3: Target has two children
+        else {
+            // Find the inorder successor
+            Node previous = null;
+            Node temp = target.right;
+            while (temp.left != null) {
+                previous = temp;
+                temp = temp.left;
+            }
+
+            //
+            if (previous != null)
+                previous.left = temp.right;
+
+            else
+                target.right = temp.right;
+
+            target.value = temp.value;
+            return;
+
         }
 
     }
+
+    static void inorder(Node root) {
+        if (root != null) {
+            inorder(root.left);
+            System.out.print(root.value + " ");
+            inorder(root.right);
+        }
+    }
+
 }
