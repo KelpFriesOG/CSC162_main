@@ -6,7 +6,8 @@ public class Node {
 
     Node(double value) {
         this.value = value;
-        left = right = null;
+        left = null;
+        right = null;
     }
 
 }

@@ -1,232 +1,253 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Launch TriangleTesting",
-            "request": "launch",
-            "mainClass": "labs.TriangleTesting",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch TestInheritance",
-            "request": "launch",
-            "mainClass": "assignments.assignment1.TestInheritance",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Question1",
-            "request": "launch",
-            "mainClass": "assignments.assignment2.Question1",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Question2",
-            "request": "launch",
-            "mainClass": "assignments.assignment2.Question2",
-            "projectName": "CSC162_b5dd2043",
-            "args": "${command:SpecifyProgramArgs}"
-        },
-        {
-            "type": "java",
-            "name": "Launch LinkedList",
-            "request": "launch",
-            "mainClass": "data_structures.LinkedList",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch BTTestings",
-            "request": "launch",
-            "mainClass": "data_structures.binarytree.BTTestings",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch AccountTesting",
-            "request": "launch",
-            "mainClass": "labs.AccountTesting",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Fan",
-            "request": "launch",
-            "mainClass": "labs.Fan",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Lab4",
-            "request": "launch",
-            "mainClass": "labs.Lab4",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Lab6",
-            "request": "launch",
-            "mainClass": "labs.Lab6",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Loan",
-            "request": "launch",
-            "mainClass": "labs.Loan",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Oct_3_2022",
-            "request": "launch",
-            "mainClass": "labs.Oct_3_2022",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch ProcessScore",
-            "request": "launch",
-            "mainClass": "labs.ProcessScore",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch ReviewLabs",
-            "request": "launch",
-            "mainClass": "labs.ReviewLabs",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Sept14_2022",
-            "request": "launch",
-            "mainClass": "labs.Sept14_2022",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Car",
-            "request": "launch",
-            "mainClass": "notes.Car",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch CarTesting",
-            "request": "launch",
-            "mainClass": "notes.CarTesting",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Chapter10",
-            "request": "launch",
-            "mainClass": "notes.Chapter10",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Chapter11",
-            "request": "launch",
-            "mainClass": "notes.Chapter11",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Chapter11Testing",
-            "request": "launch",
-            "mainClass": "notes.Chapter11Testing",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Chapter12",
-            "request": "launch",
-            "mainClass": "notes.Chapter12",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Chapter12Testing",
-            "request": "launch",
-            "mainClass": "notes.Chapter12Testing",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Chapter17",
-            "request": "launch",
-            "mainClass": "notes.Chapter17",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Chapter18",
-            "request": "launch",
-            "mainClass": "notes.Chapter18",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Chapter9",
-            "request": "launch",
-            "mainClass": "notes.Chapter9",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch JavaReviewNotes",
-            "request": "launch",
-            "mainClass": "notes.JavaReviewNotes",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch ArrayExceptions",
-            "request": "launch",
-            "mainClass": "practice.ArrayExceptions",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch Calculator",
-            "request": "launch",
-            "mainClass": "practice.Calculator",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch SortedArrayFindCommons",
-            "request": "launch",
-            "mainClass": "practice.SortedArrayFindCommons",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch TicTacToe",
-            "request": "launch",
-            "mainClass": "practice.TicTacToe",
-            "projectName": "CSC162_b5dd2043"
-        },
-        {
-            "type": "java",
-            "name": "Launch QueueTest",
-            "request": "launch",
-            "mainClass": "practice.objects.QueueTest",
-            "projectName": "CSC162_b5dd2043"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Chapter18Labs",
+      "request": "launch",
+      "mainClass": "labs.Chapter18Labs",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Lab7",
+      "request": "launch",
+      "mainClass": "labs.Lab7",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter19",
+      "request": "launch",
+      "mainClass": "notes.Chapter19",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch TriangleTesting",
+      "request": "launch",
+      "mainClass": "labs.TriangleTesting",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestInheritance",
+      "request": "launch",
+      "mainClass": "assignments.assignment1.TestInheritance",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Question1",
+      "request": "launch",
+      "mainClass": "assignments.assignment2.Question1",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Question2",
+      "request": "launch",
+      "mainClass": "assignments.assignment2.Question2",
+      "projectName": "CSC162_b5dd2043",
+      "args": "${command:SpecifyProgramArgs}"
+    },
+    {
+      "type": "java",
+      "name": "Launch LinkedList",
+      "request": "launch",
+      "mainClass": "data_structures.LinkedList",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch BTTestings",
+      "request": "launch",
+      "mainClass": "data_structures.binarytree.BTTestings",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch AccountTesting",
+      "request": "launch",
+      "mainClass": "labs.AccountTesting",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Fan",
+      "request": "launch",
+      "mainClass": "labs.Fan",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Lab4",
+      "request": "launch",
+      "mainClass": "labs.Lab4",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Lab6",
+      "request": "launch",
+      "mainClass": "labs.Lab6",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Loan",
+      "request": "launch",
+      "mainClass": "labs.Loan",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Oct_3_2022",
+      "request": "launch",
+      "mainClass": "labs.Oct_3_2022",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch ProcessScore",
+      "request": "launch",
+      "mainClass": "labs.ProcessScore",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch ReviewLabs",
+      "request": "launch",
+      "mainClass": "labs.ReviewLabs",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Sept14_2022",
+      "request": "launch",
+      "mainClass": "labs.Sept14_2022",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Car",
+      "request": "launch",
+      "mainClass": "notes.Car",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch CarTesting",
+      "request": "launch",
+      "mainClass": "notes.CarTesting",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter10",
+      "request": "launch",
+      "mainClass": "notes.Chapter10",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter11",
+      "request": "launch",
+      "mainClass": "notes.Chapter11",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter11Testing",
+      "request": "launch",
+      "mainClass": "notes.Chapter11Testing",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter12",
+      "request": "launch",
+      "mainClass": "notes.Chapter12",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter12Testing",
+      "request": "launch",
+      "mainClass": "notes.Chapter12Testing",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter17",
+      "request": "launch",
+      "mainClass": "notes.Chapter17",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter18",
+      "request": "launch",
+      "mainClass": "notes.Chapter18",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter9",
+      "request": "launch",
+      "mainClass": "notes.Chapter9",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch JavaReviewNotes",
+      "request": "launch",
+      "mainClass": "notes.JavaReviewNotes",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch ArrayExceptions",
+      "request": "launch",
+      "mainClass": "practice.ArrayExceptions",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Calculator",
+      "request": "launch",
+      "mainClass": "practice.Calculator",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch SortedArrayFindCommons",
+      "request": "launch",
+      "mainClass": "practice.SortedArrayFindCommons",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch TicTacToe",
+      "request": "launch",
+      "mainClass": "practice.TicTacToe",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch QueueTest",
+      "request": "launch",
+      "mainClass": "practice.objects.QueueTest",
+      "projectName": "CSC162_b5dd2043"
+    }
+  ]
 }
