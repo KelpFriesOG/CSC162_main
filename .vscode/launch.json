@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Abhinav",
+      "request": "launch",
+      "mainClass": "assignments.assignment2.Abhinav",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
       "name": "Launch Chapter18Labs",
       "request": "launch",
       "mainClass": "labs.Chapter18Labs",
