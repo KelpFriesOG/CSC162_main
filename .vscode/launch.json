@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ComplexityVisual",
+      "request": "launch",
+      "mainClass": "practice.ComplexityVisual",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch CompareFib",
+      "request": "launch",
+      "mainClass": "practice.CompareFib",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Lab8",
+      "request": "launch",
+      "mainClass": "labs.Lab8",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Abdul",
+      "request": "launch",
+      "mainClass": "assignments.assignment2.Abdul",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
       "name": "Launch Abhinav",
       "request": "launch",
       "mainClass": "assignments.assignment2.Abhinav",

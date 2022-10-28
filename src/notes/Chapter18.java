@@ -607,7 +607,7 @@ public class Chapter18 {
         if (index == 0 || index == 1) { // Base cases
             return 1;
         } else { // Recursive calls
-            return computeFactorial(index - 1) * computeFactorial(index - 2);
+            return computeFibonacci(index - 1) * computeFibonacci(index - 2);
         }
     }
 

@@ -111,12 +111,12 @@ public class Chapter18Labs {
     public static void main(String[] args) {
 
         // Testing iterative fibonacci series (18.2)
-        System.out.println("The sixth element in the fibonacci sequence is: "
-                + fibIter(6));
+        System.out.println("The hundredth element in the fibonacci sequence is: "
+                + fibIter(48));
 
         // Testing recursive gcd calculations (18.3)
         System.out.println("The greatest common divisor of 60 and 124 is: " +
-                gcd(60, 124));
+                gcd(56, 8));
 
         // Testing first sum series (18.4)
         for (int i = 1; i <= 10; i++) {
