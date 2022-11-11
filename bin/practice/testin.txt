@@ -1,0 +1,10 @@
+Apples
+10 1.25
+Chimichangas
+15 2.00
+Burritos
+4 2.50
+Cheddar
+10 0.50
+Maple Syrup
+2 8.00

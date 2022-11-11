@@ -65,7 +65,7 @@ public class ComplexityVisual {
 
     public static void main(String[] args) {
 
-        double[] nIterations = new double[50];
+        double[] nIterations = new double[30];
 
         for (int i = 0; i < nIterations.length; i++) {
             nIterations[i] = i + 1;

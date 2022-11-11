@@ -72,7 +72,7 @@ public class Chapter18Labs {
 
     static int count(String value, char instance) {
         if (!value.isEmpty()) {
-            return value.charAt(0) == instance ? 1 + count(value.substring(1), instance)
+            return value.charAt(0) == instance ? 1 + count(value.substring(1, 10), instance)
                     : count(value.substring(1), instance);
         } else {
             return 0;

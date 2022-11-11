@@ -6,6 +6,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch BigO",
+      "request": "launch",
+      "mainClass": "practice.BigO",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch ReadingTheGettysburg",
+      "request": "launch",
+      "mainClass": "labs.ReadingTheGettysburg",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Chapter22",
+      "request": "launch",
+      "mainClass": "notes.Chapter22",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Nov102022_Testing",
+      "request": "launch",
+      "mainClass": "labs.Nov102022_Testing",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch ohgodwhy",
+      "request": "launch",
+      "mainClass": "ohgodwhy",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch ch9Testing",
+      "request": "launch",
+      "mainClass": "review.ch9Testing",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Lab8_2",
+      "request": "launch",
+      "mainClass": "labs.Lab8_2",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch printwriterTesting",
+      "request": "launch",
+      "mainClass": "practice.printwriterTesting",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
       "name": "Launch ComplexityVisual",
       "request": "launch",
       "mainClass": "practice.ComplexityVisual",

@@ -64,6 +64,13 @@ public class Parent {
 
     }
 
+    public double sum() {
+        int sum = list.get(0);
+        for (int i = 1; i < list.size(); i++) {
+            sum += list.get(i);
+        }
+        return sum;
+    }
 
     // Testing code (unused)
     public ArrayList<Integer> removeDuplicates2() {
