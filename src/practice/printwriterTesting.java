@@ -32,7 +32,7 @@ public class printwriterTesting {
             item = inFile.nextLine();
             quantity = inFile.nextInt();
             price = inFile.nextFloat();
-            
+
             if (inFile.hasNextLine()) {
                 inFile.nextLine();
             }
@@ -44,6 +44,7 @@ public class printwriterTesting {
 
         inFile.close();
         outFile.close();
+        kb.close();
 
     }
 }

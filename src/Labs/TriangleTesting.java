@@ -10,5 +10,6 @@ public class TriangleTesting {
             System.out.println("Impossible triangle!");
             // e.printStackTrace();
         }
+
     }
 }

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Chapter12 {
@@ -13,7 +14,7 @@ public class Chapter12 {
      * Main Goals:
      * - Advantages of Exception handling
      * - Differentiating between exceptions and errors
-     * - Declaaring Exceptions in method signatures
+     * - Declaring Exceptions in method signatures
      * - Throwing exceptions in methods
      * - Implementing try-catch blocks
      * - Use finally() in tandem with t-c blocks
@@ -385,8 +386,8 @@ public class Chapter12 {
         }
     }
 
-    public static void method3(int n) throws IllegalArgumentException{
-        throw new IllegalArgumentException("Exception from method 3");
+    public static void method3(int n) throws ArithmeticException {
+        throw new ArithmeticException("Exception from method 3");
     }
 
     public static int sum(int[] arr) {
@@ -404,11 +405,11 @@ public class Chapter12 {
         Scanner input = new Scanner(System.in);
 
         // #region Try-Catch block examples
-
+        int bobo = 0;
         // Prompting user for two ints
         System.out.println("Enter two integers: ");
         int number1 = input.nextInt();
-        int number2 = input.nextInt();
+        int number2 = input.nextInt(); // Exception
 
         try {
             int result = quotient(number1, number2);
@@ -600,8 +601,8 @@ public class Chapter12 {
         // #region Reading from a file object representation
         File registrar = new File("src/notes/registrar.txt");
 
-        try (Scanner filereader = new Scanner(registrar);) {
-            while (filereader.hasNext()) {
+        try (Scanner filereader = new Scanner(registrar)) {
+            while (true) {
                 String firstName = filereader.next();
                 String mi = filereader.next();
                 String lastName = filereader.next();
@@ -611,6 +612,8 @@ public class Chapter12 {
                         lastName + " SCORE: " + score);
             }
 
+        } catch (NoSuchElementException e) {
+            System.out.println("Finished reading the file!");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -636,7 +639,7 @@ public class Chapter12 {
 
         } catch (Exception e) {
             e.printStackTrace();
-            
+
         }
 
         // #endregion

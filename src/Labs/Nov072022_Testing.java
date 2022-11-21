@@ -1,9 +1,10 @@
 package labs;
 
 import java.util.ArrayList;
-import java.util.stream.IntStream;
 
 public class Nov072022_Testing {
+
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
 
         System.out.println("Question 1---------------------------------\n");
@@ -41,6 +42,7 @@ public class Nov072022_Testing {
         for (int i = 0; i < 10; i++) {
             arr.add(Math.random() * 100);
         }
+
         // Populating array with random values from 0 to 100 (double values!)
 
         SumChild sumObject = new SumChild(arr);

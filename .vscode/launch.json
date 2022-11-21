@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Nov16_2022",
+      "request": "launch",
+      "mainClass": "labs.Nov16_2022",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch sortingAlgos",
+      "request": "launch",
+      "mainClass": "bigO.sortingAlgos",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Nov14_2022",
+      "request": "launch",
+      "mainClass": "labs.Nov14_2022",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestingClass",
+      "request": "launch",
+      "mainClass": "assignments.assignment3.TestingClass",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch ParentString",
+      "request": "launch",
+      "mainClass": "assignments.assignment3.ParentString",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
       "name": "Launch BigO",
       "request": "launch",
       "mainClass": "practice.BigO",

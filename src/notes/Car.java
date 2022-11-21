@@ -2,13 +2,14 @@ package notes;
 
 //import java.io.Serializable;
 
-public class Car {
+public class Car implements Comparable<Car> {
 
     // #region Class variables
 
     private String name;
     private String brand;
     private int yearOfProd;
+    private int odometer = 0;
     private static int instances = 0;
     // Static variables are carried through all instances of the class
 
@@ -32,6 +33,14 @@ public class Car {
         this.brand = brand;
         this.yearOfProd = year;
         this.name = name;
+        instances++;
+    }
+
+    public Car(String brand, int year, String name, int odometer) { // Overloaded constructor
+        this.brand = brand;
+        this.yearOfProd = year;
+        this.name = name;
+        this.odometer = odometer;
         instances++;
     }
 
@@ -92,6 +101,10 @@ public class Car {
     }
 
     // #endregion
+
+    public int compareTo(Car anotherCar) {
+        return this.odometer > anotherCar.odometer ? -1 : this.odometer < anotherCar.odometer ? 1 : 0;
+    }
 
     public static void main(String[] args) {
         Car hondaCar = new Car();

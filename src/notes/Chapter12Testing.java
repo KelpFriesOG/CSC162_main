@@ -16,6 +16,8 @@ public class Chapter12Testing {
             // Should print "Radius cannot be negative"
         }
 
+        Integer i = new Integer(15);
+
         System.out.println("Hello");
 
         // #endregion
