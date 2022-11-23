@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Nov21_2022",
+      "request": "launch",
+      "mainClass": "labs.Nov21_2022",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
       "name": "Launch Nov16_2022",
       "request": "launch",
       "mainClass": "labs.Nov16_2022",

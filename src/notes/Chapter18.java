@@ -637,7 +637,7 @@ public class Chapter18 {
         }
     }
 
-    // #endregion
+    // #endregion=
 
     // #region Optimized Palindrome checking methods
 
@@ -752,6 +752,7 @@ public class Chapter18 {
 
     public static void main(String[] args) {
         // Scanner input = new Scanner(System.in);
-
+        System.out.println(checkPalindrome("abcba"));
+        
     }
 }
