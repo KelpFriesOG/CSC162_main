@@ -1,7 +1,9 @@
 package assignments.assignment1;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 /* Author: Kalpesh Chavan
  * Date: 10/03/2022
@@ -73,18 +75,26 @@ public class Parent {
     }
 
     // Testing code (unused)
-    public ArrayList<Integer> removeDuplicates2() {
+    static ArrayList<String> removeDuplicates2(File file) {
 
-        ArrayList<Integer> uniques = new ArrayList<Integer>();
         // Initializing arraylist to keep track of unique values
+        ArrayList<String> uniques = new ArrayList<>();
 
-        for (int j = 0; j < list.size(); j++) {
+        try {
+            Scanner input = new Scanner(file);
 
-            if (!uniques.contains(list.get(j))) {
-                uniques.add(list.get(j));
-                // We add the element at list[j] if
-                // and only if it is not in the uniques list.
+            while (input.hasNext()) {
+
+                String value = input.next();
+
+                if (!uniques.contains(value)) {
+                    uniques.add(value);
+                }
             }
+
+            input.close();
+        } catch (Exception e) {
+
         }
 
         return uniques;
@@ -112,6 +122,11 @@ public class Parent {
     }
 
     // #endregion
+
+    public static void main(String[] args) {
+        File file = new File("src\\assignments\\assignment1\\testme.txt");
+        System.out.println(removeDuplicates2(file));
+    }
 
     // #region Getter (if needed)
 

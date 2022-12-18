@@ -182,5 +182,6 @@ public class Nov21_2022 {
         System.out.println(maxSubsequence("cbacdbefg"));
         System.out.println(isSubstring("Welhelcome", "com"));
         System.out.println(isSubstring("Zebra", "bro"));
+        System.out.println(isSubstring("Crimson Dynamo", "Crim"));
     }
 }

@@ -4,10 +4,12 @@ public class ChildReverse extends ParentReverse {
 
     // #region Constructors
 
-    public ChildReverse(String str) { // Constructor used for Q2
-        super(str);
+    public ChildReverse() { // Constructor used for Q2
+        super();
         // The super keyword here calls the parent counstructor
-        // that matches with the give parameters (a single String object).
+        // that matches with the give parameters (no parameters).
+        // Java would also have this constructor made implicitly if
+        // no other constructor was specified.
     }
 
     // #endregion

@@ -16,6 +16,22 @@ public class Lab8_2 {
         return max;
     }
 
+    public static int count(String str, char a) {
+        return count(str, a, 0);
+    }
+
+    private static int count(String str, char a, int index) {
+
+        if (index > str.length() - 1) {
+            return 0;
+        }
+        if (str.toLowerCase().charAt(index) == Character.toLowerCase(a)) {
+            return 1 + count(str, a, index + 1);
+        } else {
+            return count(str, a, index + 1);
+        }
+    }
+
     public static <E> ArrayList<E> removeDuplicates(ArrayList<E> list) {
 
         ArrayList<E> uniques = new ArrayList<>();
@@ -52,11 +68,28 @@ public class Lab8_2 {
     }
 
     public static void main(String[] args) {
+
         ArrayList<String> names = new ArrayList<>();
         names.add("Kalpesh");
         names.add("Bryan");
         names.add("Dev");
         names.add("Dev");
-        System.out.println(max(names));
+
+        // Scanner input = new Scanner(System.in);
+        // ArrayList<Integer> myInts = new ArrayList<>();
+
+        // try {
+        // for (int i = 0; i < 10; i++) {
+        // System.out.println("Please enter a number");
+        // int value = input.nextInt();
+        // myInts.add(value);
+        // }
+        // } catch (InputMismatchException e) {
+        // System.out.println("Please only enter ints.");
+        // }
+
+        // System.out.println(max(myInts));
+        System.out.println(count("KAAlpesh is a dumbass", 'A'));
+
     }
 }

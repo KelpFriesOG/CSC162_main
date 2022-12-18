@@ -54,6 +54,7 @@ public class TestingClass {
                             + ", try again!");
                     // Or else we show a message and continue the loop
                 }
+
             }
 
             System.out.println("\n-----------------------------------------");
@@ -73,11 +74,11 @@ public class TestingClass {
             String value = input.nextLine();
             // Taking in user inputted string
 
-            ChildReverse childObj = new ChildReverse(value);
+            ChildReverse childObj = new ChildReverse();
             // Creating child object with string
 
             System.out.println("\nThe reversed string is: ");
-            childObj.reverseDisplay();
+            childObj.reverseDisplay(value);
             // Calling reverseDisplay method which prints the string in reverse!
 
         } catch (Exception e) {
@@ -90,6 +91,7 @@ public class TestingClass {
         // #endregion
 
         input.close();
+        // Closing the scanner object
 
     }
 }

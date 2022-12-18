@@ -1,6 +1,6 @@
 package labs;
 
-public class Fan {
+public class Fan implements Comparable<Fan> {
     final int SLOW = 1;
     final int MEDIUM = 2;
     final int FAST = 3;
@@ -13,6 +13,11 @@ public class Fan {
 
     public Fan() {
 
+    }
+
+    @Override
+    public int compareTo(Fan o) {
+        return 0;
     }
 
     public int getSpeed() {

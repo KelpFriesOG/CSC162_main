@@ -6,6 +6,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch testingClass",
+      "request": "launch",
+      "mainClass": "csc162_finals.testingClass",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch testingClass",
+      "request": "launch",
+      "mainClass": "testingClass",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Parent",
+      "request": "launch",
+      "mainClass": "assignments.assignment1.Parent",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Repeats",
+      "request": "launch",
+      "mainClass": "labs.Repeats",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch PowerSet",
+      "request": "launch",
+      "mainClass": "practice.PowerSet",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Dec5_2022",
+      "request": "launch",
+      "mainClass": "labs.Dec5_2022",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch Assignment4",
+      "request": "launch",
+      "mainClass": "assignments.assignment4.Assignment4",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestingClass",
+      "request": "launch",
+      "mainClass": "assignments.assignment4.TestingClass",
+      "projectName": "CSC162_b5dd2043"
+    },
+    {
+      "type": "java",
       "name": "Launch Nov21_2022",
       "request": "launch",
       "mainClass": "labs.Nov21_2022",

@@ -46,6 +46,8 @@ public class Car implements Comparable<Car> {
 
     // #endregion
 
+    // Complexity, Recursion, Generics, Sorting
+
     // #region Getters and Setters
 
     public String getName() {
@@ -101,7 +103,6 @@ public class Car implements Comparable<Car> {
     }
 
     // #endregion
-
     public int compareTo(Car anotherCar) {
         return this.odometer > anotherCar.odometer ? -1 : this.odometer < anotherCar.odometer ? 1 : 0;
     }

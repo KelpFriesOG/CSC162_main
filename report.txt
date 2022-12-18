@@ -1,0 +1,11 @@
+Employee Number					Name					Phone Number					Department					Skill/Position
+123987					Adams, Nicholas					732-1131					DeptC					Orderly
+951753					Garfield, Nancy					777-7111					DeptA					Custodian
+147852					Harvey, Carlton					732-5111					DeptE					Doctor
+789456					Jones, Kevin					732-1112					DeptB					Aid
+852963					Lindsey, Paula					732-1141					DeptD					Secretary
+456852					Madison, Karen					732-1118					DeptB					Nurse
+369874					Nixon, Marc					732-1116					DeptF					Nurse
+793182					Peters, Thomas					732-6711					DeptD					Greeter
+413456					Smtih, Molly					732-1111					DeptA					Nurse
+842658					Washington, Jerry					732-1911					DeptC					Helper
